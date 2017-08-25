@@ -1,0 +1,26 @@
+// Toolbox
+.fontawesome {
+    display: inline-block;
+    font-family: fontawesome;
+}
+.vertical-center {
+    // !! set container to position: relative !!
+    position: absolute;
+    // set top of object to be 50% down
+    top: 50%;
+    // move object UP half its own height
+    transform: translateY(-50%);
+}
+.list-reset {
+    // no list dots and no padding
+    list-style: none;
+    padding-left: 0;
+}
+.clearfloats {
+    // make container of floaty items full height again
+    display: inline-block;
+    width: 100%;
+}
+.id(@color: red) {
+    border: 1px solid @color;
+}
