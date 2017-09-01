@@ -57,9 +57,6 @@ jQuery(document).ready(function() {
                 0:{
                     items:1
                 },
-                520:{
-                    items:2
-                },
                 920:{
                     items:3
                     //,margin: 28
