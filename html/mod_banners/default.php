@@ -13,8 +13,8 @@ JLoader::register('BannerHelper', JPATH_ROOT . '/components/com_banners/helpers/
 $baseurl = JUri::base();
 ?>
 
-
 <?php foreach ($list as $item) : ?>
+    <div class="item">
     <?php $imageurl = $item->params->get('imageurl'); ?>
     <?php $alt = $item->params->get('alt'); ?>
     <?php $alt = $alt ?: $item->name; ?>
@@ -22,5 +22,5 @@ $baseurl = JUri::base();
     <?php // Just display the image if no link specified ?>
         <img src="<?php echo $baseurl . $imageurl;?>" alt="<?php echo $alt;?>"/>
      <?php echo $item->description ?>
-
+     </div>
 <?php endforeach; ?>

@@ -36,6 +36,15 @@ jQuery(document).ready(function() {
 		jQuery('html').removeClass('js-nav');
 	});
 
+    if (jQuery('.moduletable.home-banner').length) {
+        jQuery('.moduletable.home-banner').owlCarousel({
+            loop: false,
+            nav: false,
+            dots: true,
+            items: 1
+        });
+    }
+
 	if (jQuery('.moduletable.services-carousel').length) {
         jQuery('.moduletable.services-carousel .latest-news-articles').owlCarousel({
             loop: false,
@@ -47,7 +56,33 @@ jQuery(document).ready(function() {
     }
 
     if (jQuery('.moduletable.products-carousel').length) {
-		jQuery('.moduletable.products-carousel .latest-news-articles').owlCarousel({
+        jQuery('.moduletable.products-carousel .latest-news-articles').owlCarousel({
+            loop: false,
+            margin: 20,
+            nav: false,
+            dots: true,
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items: 1
+                },
+                550:{
+                    items: 2
+                },
+                920:{
+                    items: 3
+                },
+                1360:{
+                    items: 4
+                    ,nav: true
+                    ,margin: 78
+                }
+            }
+        });
+    }
+
+    if (jQuery('.moduletable.products-carousel').length) {
+		jQuery('.moduletable.products-carousel .categories-module').owlCarousel({
 	        loop: false,
             margin: 20,
             nav: false,
@@ -55,11 +90,13 @@ jQuery(document).ready(function() {
             responsiveClass:true,
             responsive:{
                 0:{
-                    items:1
+                    items: 1
+                },
+                550:{
+                    items: 2
                 },
                 920:{
-                    items:3
-                    //,margin: 28
+                    items: 3
                 },
                 1360:{
                     items: 4
@@ -73,10 +110,65 @@ jQuery(document).ready(function() {
     if (jQuery('.moduletable.news-carousel').length) {
         jQuery('.moduletable.news-carousel .latest-news-articles').owlCarousel({
             loop: false,
-            margin: 10,
             nav: true,
             dots: true,
-            items: 1
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items: 1
+                },
+                920:{
+                    items: 2,
+                    margin: 30
+                },
+                1360:{
+                    items: 3,
+                    margin: 30
+                }
+            }
+        });
+    }
+
+    if (jQuery('.moduletable.product-customer-testimonials-carousel').length) {
+        jQuery('.moduletable.product-customer-testimonials-carousel .latest-news-articles').owlCarousel({
+            loop: false,
+            nav: true,
+            dots: false,
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items: 1
+                },
+                850:{
+                    items: 2
+                    ,margin: 29
+                }
+            }
+        });
+    }
+
+    if (jQuery('.moduletable.product-related-products-carousel').length) {
+        jQuery('.moduletable.product-related-products-carousel .latest-news-articles').owlCarousel({
+            loop: false,
+            margin: 35,
+            nav: true,
+            dots: false,
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items: 1
+                },
+                520:{
+                    items: 2
+                },
+                920:{
+                    items: 3
+                    //,margin: 28
+                },
+                1360:{
+                    items: 4
+                }
+            }
         });
     }
 
